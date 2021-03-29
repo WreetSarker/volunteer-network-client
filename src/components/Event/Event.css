@@ -1,0 +1,7 @@
+.card-holder{
+    display: flex;
+    flex-direction: column;
+}
+.card-holder img{
+    width: 30%;
+}
