@@ -1,3 +1,7 @@
+/* .container{
+    display: inline-grid;
+  grid-template-columns: auto auto auto;
+} */
 .card-holder{
     display: flex;
     flex-direction: column;

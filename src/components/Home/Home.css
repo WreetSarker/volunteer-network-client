@@ -1,0 +1,11 @@
+.event-container{
+    display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .event-container{
+        display: flex;
+        flex-direction: column;
+    }
+  }

@@ -13,7 +13,7 @@ const AddEvent = () => {
         }
 
 
-        fetch('http://localhost:4000/addEvent', {
+        fetch('https://glacial-cliffs-28661.herokuapp.com/addEvent', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
