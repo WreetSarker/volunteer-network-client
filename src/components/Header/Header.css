@@ -1,0 +1,37 @@
+body {background-color: rgba(201, 76, 76, 0.3);}
+
+.nav-logo img{
+    width: 200px;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    
+}
+
+.nav li{
+    display: inline;
+    margin-left: 50px;
+    
+  }
+  
+  .nav a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.877);
+    
+    font-weight: bold;
+  }
+
+  @media (max-width: 700px) {
+    .header{
+       background-size: 50% 50%;
+    }
+    .nav li{
+        display: flex;
+        flex-direction: column;
+        height: 30px;
+        width: 80px;
+    }
+}
