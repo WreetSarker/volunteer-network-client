@@ -8,6 +8,8 @@ body {background-color: rgba(201, 76, 76, 0.3);}
     display: flex;
     justify-content: space-between;
     height: 200px;
+    margin-right: 20px;
+    margin-left: 20px;
     
 }
 
