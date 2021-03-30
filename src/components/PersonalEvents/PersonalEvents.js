@@ -7,7 +7,7 @@ const PersonalEvents = () => {
     const [personalEvents, setPersonalEvents] = useState([]);
 
     useEffect(() => {
-        fetch('https://glacial-cliffs-28661.herokuapp.com/getPersonalEvents')
+        fetch('https://glacial-cliffs-28661.herokuapp.com/getPersonalEvents?email=' + loggedInUser.email)
             .then(resp => resp.json())
             .then(data => setPersonalEvents(data))
     }, [])
