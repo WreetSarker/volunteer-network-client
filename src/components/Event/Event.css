@@ -1,11 +1,14 @@
-/* .container{
-    display: inline-grid;
-  grid-template-columns: auto auto auto;
-} */
+/* .
+ */
 .card-holder{
     display: flex;
     flex-direction: column;
+    
 }
 .card-holder img{
+    width: 30%;
+}
+
+.card-holder button{
     width: 30%;
 }

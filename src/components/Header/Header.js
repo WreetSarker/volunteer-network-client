@@ -26,7 +26,7 @@ const Header = () => {
                             <Link to="/login">Contact</Link>
                         </li>
                         <li>
-                            <Link className="btn-book" to="/login">{loggedInUser?.email ? loggedInUser.email : 'Login'}</Link>
+                            <Link className="btn-book" to="/login">{(loggedInUser?.name || loggedInUser?.displayName) ? (loggedInUser.name || loggedInUser.displayName) : 'Login'}</Link>
                         </li>
                     </ul>
                 </nav>

@@ -16,35 +16,31 @@ const Register = () => {
     let { from } = location.state || { from: { pathname: "/" } };
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    const [newUser, setNewUser] = useState(false);
-    const [pass, setPass] = useState({
-        password: '',
-        confirmPassword: ''
-    });
     const [user, setUser] = useState({
-        isSignedIn: false,
         name: '',
         email: '',
-        password: '',
+        eventName: '',
+        date: new Date().toDateString('dd/MM/yyyy'),
         error: '',
-        success: false,
     });
 
     const [selectedDate, setSelectedDate] = useState({
-        date: new Date()
+        date: new Date().toDateString('dd/MM/yyyy')
     })
 
     const handleDateChange = (date) => {
         const newDate = { ...selectedDate };
-        newDate.date = date
+        newDate.date = date.toDateString('dd/MM/yyyy');
+        const newUserInfo = { ...user };
+        newUserInfo.date = date.toDateString('dd/MM/yyyy');
+        setUser(newUserInfo);
         setSelectedDate(newDate);
     };
 
 
     const handleSubmit = (e) => {
 
-
-
+        history.replace(from);
         e.preventDefault();
     }
 
@@ -52,17 +48,15 @@ const Register = () => {
 
     const handleBlur = (event) => {
         let isFieldValid = true;
-        let passValue = '';
-        let confirmedPass = '';
         if (event.target.name === 'email') {
             isFieldValid = /\S+@\S+\.\S+/.test(event.target.value);
         }
-
-
         if (isFieldValid) {
             const newUserInfo = { ...user };
             newUserInfo[event.target.name] = event.target.value;
+            newUserInfo.isSignedIn = true
             setUser(newUserInfo);
+            setLoggedInUser(newUserInfo);
         }
     }
     return (
