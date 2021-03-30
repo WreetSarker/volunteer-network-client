@@ -1,0 +1,25 @@
+.events-holder{
+    display: flex;
+    justify-content: flex-start;
+    border: 3px solid gray;
+    margin: 8px;
+    border-radius: 15px;
+    width: 50%;
+    background: rgb(226, 214, 214);
+}
+.img-container img{
+    height: 100%;
+    width: 150px;
+    margin-right: 10px;
+    border-radius: 15px;
+}
+.info{
+    text-align: left;
+    margin-top: 0;
+}
+.cancel-btn{
+    margin-top: 25px;
+    height:25px;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, tomato, lightsalmon);
+}

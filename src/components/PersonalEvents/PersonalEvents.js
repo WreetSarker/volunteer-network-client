@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../App';
-import DetailPersonalEvents from '../../DetailPersonalEvents/DetailPersonalEvents';
+import DetailPersonalEvents from '../DetailPersonalEvents/DetailPersonalEvents';
 
 const PersonalEvents = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
